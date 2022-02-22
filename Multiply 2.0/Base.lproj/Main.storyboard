@@ -61,7 +61,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="party mode"/>
                                 <connections>
-                                    <action selector="partyModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3N0-b6-c2K"/>
+                                    <action selector="partyModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEA-4T-ksM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplication App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJW-lA-yq8">
@@ -161,7 +161,6 @@
                         <outlet property="BKGDImage" destination="och-NE-osm" id="zH0-XQ-IFg"/>
                         <outlet property="MultiplicationLabel" destination="KJW-lA-yq8" id="PeA-u6-pbC"/>
                         <outlet property="PartyModeButtonOutlet" destination="Z1H-iU-iHU" id="Ldw-Ez-VXs"/>
-                        <outlet property="PartyModeLabel" destination="TX0-RI-POc" id="7ua-If-RsL"/>
                         <outlet property="ResultLabel" destination="sWK-MQ-ohu" id="6JS-nl-CdE"/>
                         <outlet property="XSignlabel" destination="F76-PF-jm2" id="TiW-yA-Fqm"/>
                         <outlet property="catBurritoImage" destination="4dN-Mz-5cb" id="zDK-yc-rmK"/>

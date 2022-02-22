@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     //MARK: Create Outlets
     
     //MARK: Party Mode
-
-    @IBOutlet weak var PartyModeLabel: UILabel!
     
     @IBOutlet weak var BKGDImage: UIImageView!
     
@@ -67,7 +65,6 @@ class ViewController: UIViewController {
         modButtonOutlet.isHidden = true
         plusButtonOutlet.isHidden = true
         minButtonOutlet.isHidden = true
-        PartyModeLabel.isHidden = true
         yoshiImage.isHidden = true
         catBurritoImage.isHidden = true
         lobsterDogImage.isHidden = true
@@ -111,6 +108,9 @@ class ViewController: UIViewController {
             catBurritoImage.isHidden = true
             lobsterDogImage.isHidden = false
             yoshiImage.isHidden = true
+            
+            ResultLabel.text = String(result)
+            
         }
         
         
@@ -120,6 +120,19 @@ class ViewController: UIViewController {
         catBurritoImage.isHidden = true
         lobsterDogImage.isHidden = true
         yoshiImage.isHidden = true
+    }
+    
+    
+    @IBAction func partyModeButton(_ sender: Any) {
+        BKGDImage.isHidden = false
+        modButtonOutlet.isHidden = false
+        divButtonOutlet.isHidden = false
+        plusButtonOutlet.isHidden = false
+        minButtonOutlet.isHidden = false
+        clickHereForPartyMode.isHidden = true
+        PartyModeButtonOutlet.isHidden = true
+        ResultLabel.isHidden = true
+        
     }
     
     
