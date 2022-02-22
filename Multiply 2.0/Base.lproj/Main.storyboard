@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="och-NE-osm">
-                                <rect key="frame" x="0.0" y="0.0" width="412" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMode" translatesAutoresizingMaskIntoConstraints="NO" id="och-NE-osm">
+                                <rect key="frame" x="-314" y="-371" width="1048" height="1851"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-RI-POc">
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="click here for party mode ----&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFZ-2C-6Nq">
-                                <rect key="frame" x="74" y="57" width="235" height="21"/>
+                                <rect key="frame" x="88" y="56" width="235" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -65,97 +65,116 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplication App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJW-lA-yq8">
-                                <rect key="frame" x="61" y="99" width="301" height="47"/>
+                                <rect key="frame" x="60" y="107" width="301" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54s-jf-dTa">
-                                <rect key="frame" x="148" y="306" width="37" height="31"/>
+                                <rect key="frame" x="106" y="306" width="37" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="%"/>
                                 <connections>
+                                    <action selector="divButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYS-5C-YYj"/>
                                     <action selector="partyModulus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYy-P4-t3e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBt-b8-eZV">
-                                <rect key="frame" x="106" y="306" width="34" height="31"/>
+                                <rect key="frame" x="188" y="306" width="34" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="X"/>
                                 <connections>
-                                    <action selector="partyMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTu-zQ-EbJ"/>
+                                    <action selector="mulButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOK-B4-FCX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL9-rh-qJK">
                                 <rect key="frame" x="271" y="306" width="31" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="-"/>
                                 <connections>
+                                    <action selector="minButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeb-bl-p1r"/>
                                     <action selector="partySubtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e9r-ZA-rMO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-Td-CQU">
                                 <rect key="frame" x="230" y="306" width="33" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="+"/>
                                 <connections>
                                     <action selector="partyAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8y-ZT-4V4"/>
+                                    <action selector="plusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgv-N1-GRJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3L-k5-JeF">
-                                <rect key="frame" x="193" y="306" width="29" height="31"/>
+                                <rect key="frame" x="151" y="306" width="29" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="/"/>
                                 <connections>
                                     <action selector="PARTYDIVIDE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FYl-FI-Spt"/>
+                                    <action selector="divButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNX-LA-AkW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-ZU-nQE">
-                                <rect key="frame" x="148" y="286" width="115" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Multiply!"/>
-                                <connections>
-                                    <action selector="multiplyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bb-7Z-EIt"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-Hs-vrn">
-                                <rect key="frame" x="57" y="395" width="301" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWK-MQ-ohu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWK-MQ-ohu">
                                 <rect key="frame" x="148" y="171" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yoshi" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-3m-Gle">
+                                <rect key="frame" x="87" y="372" width="240" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cat Burrito" translatesAutoresizingMaskIntoConstraints="NO" id="4dN-Mz-5cb">
+                                <rect key="frame" x="87" y="401" width="240" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lobster Dog" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-ZP-ULz">
+                                <rect key="frame" x="87" y="434" width="240" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwT-gQ-To6">
+                                <rect key="frame" x="158" y="774" width="98" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yz-Sw-7E1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="MultiplicationApp" destination="KJW-lA-yq8" id="waM-Pm-fTP"/>
-                        <outlet property="MultiplyButton" destination="Wbe-ZU-nQE" id="qkB-EI-Azo"/>
-                        <outlet property="PARTYMODElabel" destination="TX0-RI-POc" id="egF-Of-NGp"/>
-                        <outlet property="clickHereForPartyMode" destination="cFZ-2C-6Nq" id="w5u-wN-ZEq"/>
-                        <outlet property="divButtonOutlet" destination="f3L-k5-JeF" id="cmd-wb-9iu"/>
-                        <outlet property="imageViewProduct" destination="WYT-Hs-vrn" id="zkE-IU-EHp"/>
-                        <outlet property="minButtonOutlet" destination="KL9-rh-qJK" id="BJt-Xx-MFC"/>
-                        <outlet property="modButtonOutlet" destination="54s-jf-dTa" id="H2U-bg-Jjv"/>
-                        <outlet property="partyModeBKGDimage" destination="och-NE-osm" id="iTI-lg-8r5"/>
-                        <outlet property="plusButtonOutlet" destination="pkE-Td-CQU" id="Q2R-wh-Xwk"/>
-                        <outlet property="resultLabel" destination="sWK-MQ-ohu" id="KuI-ee-y5F"/>
-                        <outlet property="signageLabel" destination="F76-PF-jm2" id="hp7-EB-faS"/>
-                        <outlet property="textField1" destination="b0G-mX-1Go" id="cDP-Dh-aia"/>
+                        <outlet property="BKGDImage" destination="och-NE-osm" id="zH0-XQ-IFg"/>
+                        <outlet property="MultiplicationLabel" destination="KJW-lA-yq8" id="PeA-u6-pbC"/>
+                        <outlet property="PartyModeButtonOutlet" destination="Z1H-iU-iHU" id="Ldw-Ez-VXs"/>
+                        <outlet property="PartyModeLabel" destination="TX0-RI-POc" id="7ua-If-RsL"/>
+                        <outlet property="ResultLabel" destination="sWK-MQ-ohu" id="6JS-nl-CdE"/>
+                        <outlet property="XSignlabel" destination="F76-PF-jm2" id="TiW-yA-Fqm"/>
+                        <outlet property="catBurritoImage" destination="4dN-Mz-5cb" id="zDK-yc-rmK"/>
+                        <outlet property="clickHereForPartyMode" destination="cFZ-2C-6Nq" id="NP2-6K-YVf"/>
+                        <outlet property="divButtonOutlet" destination="f3L-k5-JeF" id="TFg-3U-1zz"/>
+                        <outlet property="lobsterDogImage" destination="Bhk-ZP-ULz" id="GtU-HR-hcU"/>
+                        <outlet property="minButtonOutlet" destination="KL9-rh-qJK" id="KcZ-99-0XP"/>
+                        <outlet property="modButtonOutlet" destination="54s-jf-dTa" id="Hoh-Zi-InN"/>
+                        <outlet property="mulButtonOutlet" destination="YBt-b8-eZV" id="RHb-X3-2Zo"/>
+                        <outlet property="plusButtonOutlet" destination="pkE-Td-CQU" id="lxz-fs-TuN"/>
+                        <outlet property="textField1" destination="LeL-OK-uYE" id="tiQ-Hl-viK"/>
                         <outlet property="textField2" destination="LeL-OK-uYE" id="vnm-r8-Fgg"/>
-                        <outlet property="xButtonOutlet" destination="YBt-b8-eZV" id="auK-gV-mGU"/>
+                        <outlet property="yoshiImage" destination="yPr-3m-Gle" id="3gG-sT-HDI"/>
                     </connections>
                 </viewController>
             </objects>
@@ -163,6 +182,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cat Burrito" width="40" height="40"/>
+        <image name="Lobster Dog" width="40" height="40"/>
+        <image name="PartyMode" width="465.33334350585938" height="190.33332824707031"/>
+        <image name="Yoshi" width="393.33334350585938" height="808.33331298828125"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

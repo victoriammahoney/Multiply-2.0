@@ -10,149 +10,147 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: Create Outlets
-    var myImage = UIImage(named: " ")
     
-    @IBOutlet weak var resultLabel: UILabel!
+    //MARK: Party Mode
+
+    @IBOutlet weak var PartyModeLabel: UILabel!
     
-    //label that says click here for party mode [hide for party mode]
+    @IBOutlet weak var BKGDImage: UIImageView!
+    
+    @IBOutlet weak var PartyModeButtonOutlet: UIButton!
+    
     @IBOutlet weak var clickHereForPartyMode: UILabel!
-    
-    //label header that says "party mode" //only for party mode
-    @IBOutlet weak var PARTYMODElabel: UILabel!
-    
-    //label that says multiplicationapp, only for normal mode
-    @IBOutlet weak var MultiplicationApp: UILabel!
-    
-    //textField
-    @IBOutlet weak var textField1: UITextField!
-    
-    //textField2
-    @IBOutlet weak var textField2: UITextField!
-    
-    //signageLabel [must be changeable]
-    @IBOutlet weak var signageLabel: UILabel!
-    
-    //fullsizeimage
-    @IBOutlet weak var partyModeBKGDimage: UIImageView!
-    
-    //image view for math products
-    @IBOutlet weak var imageViewProduct: UIImageView!
-    //all of the following are outlets so that the buttons can be hidden and shown
-    @IBOutlet weak var xButtonOutlet: UIButton!
     
     @IBOutlet weak var modButtonOutlet: UIButton!
     
     @IBOutlet weak var divButtonOutlet: UIButton!
     
     @IBOutlet weak var plusButtonOutlet: UIButton!
-
+    
     @IBOutlet weak var minButtonOutlet: UIButton!
     
-    @IBOutlet weak var MultiplyButton: UIButton!
+    
+    //MARK: Non Party Mode
+    
+    @IBOutlet weak var MultiplicationLabel: UILabel!
+    
+    @IBOutlet weak var ResultLabel: UILabel!
+    
+    //MARK: Universal
+    
+    @IBOutlet weak var textField1: UITextField!
+    
+    @IBOutlet weak var textField2: UITextField!
+    
+    @IBOutlet weak var XSignlabel: UILabel!
+    
+    @IBOutlet weak var mulButtonOutlet: UIButton!
+    
+    @IBOutlet weak var yoshiImage: UIImageView!
+    
+    @IBOutlet weak var catBurritoImage: UIImageView!
+    
+    @IBOutlet weak var lobsterDogImage: UIImageView!
+    
+    
+    
     
     
     
     //MARK: This is the OVERRIDE
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        PARTYMODElabel.isHidden = true
-        xButtonOutlet.isHidden = true
-        modButtonOutlet.isHidden = true
+        BKGDImage.isHidden = true
         divButtonOutlet.isHidden = true
+        modButtonOutlet.isHidden = true
         plusButtonOutlet.isHidden = true
         minButtonOutlet.isHidden = true
-       
+        PartyModeLabel.isHidden = true
+        yoshiImage.isHidden = true
+        catBurritoImage.isHidden = true
+        lobsterDogImage.isHidden = true
+        
+        var strInput = textField1.text ?? "8"
+        
+        var strInput2 = textField2.text ?? "8"
+        
     }
     //end of OVERRIDE //
-    //end of OVERRIDE //
     
     
 
-
+    @IBAction func mulButtonAction(_ sender: Any) {
     
-    //PARTY MODE BUTTON that turns it into party mode. Make sure you turn down visibility on the multiply button and the click here.
 
-    //NOMRAL MULTIPLY BUTTON
-    @IBAction func multiplyButton(_ sender: Any) {
+        var strInput = textField1.text ?? "8"
         
-       
+        var strInput2 = textField2.text ?? "8"
         
-        imageViewProduct.image = myImage
+        let numInput = Int(strInput) ?? 8
         
-        var field1 = textField1.text ?? ""
+        let numInput2 = Int(strInput2) ?? 8
         
-        var field2 = textField2.text ?? ""
+        var result = numInput * numInput2
         
-        var numInput1: Int {
-            return Int(field1) ?? 2
-        }
-        
-        /*  */
-        
-        var numInput2: Int {
-            return Int(field2) ?? 2
-        }
-        
-        var result = numInput1 * numInput2
-        
-        var Even = result.isMultiple(of: 2)
-        
-        var Odd = !result.isMultiple(of: 2)
-
         if result == 64 {
-            let myImage = UIImage(named: "Yoshi")
+            //shows yoshi
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = false
+        }
+        else if result%2 == 1 {
+            // shows cat burrito
+            catBurritoImage.isHidden = false
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = true
         }
         else {
-
-            switch Even {
-            case Even:
-                myImage = UIImage(named: "Cat Burrito")
-            default:
-                myImage = UIImage(named: "Cat Burrito")
-            }
-            
-            switch Odd {
-            case Odd:
-                myImage = UIImage(named: "AA Milne")
-            default:
-                myImage = UIImage(named: "AA Milne")
-            }
-            
+            // shows lobster
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = false
+            yoshiImage.isHidden = true
         }
         
-        textField1.resignFirstResponder()
-        textField2.resignFirstResponder()
-    
-}
-    
-    //@IBAction func partyModeButton(_ sender: Any) {
-    //}
-    
-    //Party MULTIPLY
-    //@IBAction func partyMultiply(_ sender: Any) {
         
-        
-    //}
+    }
     
-    //PARTY MODULUS
-    //@IBAction func partyModulus(_ sender: Any) {
-    //}
-    
-    //PARTY DIVIDE
-    //@IBAction func partyDivide(_ sender: Any) {
-    //}
-    
-    //PARTY ADD
-    //@IBAction func partyAdd(_ sender: Any) {
-    //}
-    
-    //PARTY SUBTRACT
-    //@IBAction func partySubtract(_ sender: Any) {
-    //}
+    @IBAction func resetButton(_ sender: Any) {
+        catBurritoImage.isHidden = true
+        lobsterDogImage.isHidden = true
+        yoshiImage.isHidden = true
+    }
     
     
-    //MARK: If = 64
+    
+ 
+    
+    
+    //MARK: Buttons
+    
+   /* @IBAction func modButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func divButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func plusButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func minButtonAction(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
+    
+    */
+    
+    
+    
     
     
     
