@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var PartyModeButtonOutlet: UIButton!
     
+    @IBOutlet weak var partyModeLabel: UILabel!
+    
     @IBOutlet weak var clickHereForPartyMode: UILabel!
     
     @IBOutlet weak var modButtonOutlet: UIButton!
@@ -68,16 +70,18 @@ class ViewController: UIViewController {
         yoshiImage.isHidden = true
         catBurritoImage.isHidden = true
         lobsterDogImage.isHidden = true
+        partyModeLabel.isHidden = true
+        ResultLabel.isHidden = true
         
-        var strInput = textField1.text ?? "8"
+        _ = textField1.text ?? "8"
         
-        var strInput2 = textField2.text ?? "8"
+        _ = textField2.text ?? "8"
         
     }
     //end of OVERRIDE //
     
     
-
+//MARK: Multiply
     @IBAction func mulButtonAction(_ sender: Any) {
     
 
@@ -109,22 +113,26 @@ class ViewController: UIViewController {
             lobsterDogImage.isHidden = false
             yoshiImage.isHidden = true
             
-            ResultLabel.text = String(result)
+            ResultLabel.isHidden = false
+            ResultLabel.text = "\(result)"
+            
             
         }
         
         
     }
-    
+//MARK: Reset Button
     @IBAction func resetButton(_ sender: Any) {
         catBurritoImage.isHidden = true
         lobsterDogImage.isHidden = true
         yoshiImage.isHidden = true
+        ResultLabel.isHidden = true
     }
     
     
+//MARK: Party Mode Button
     @IBAction func partyModeButton(_ sender: Any) {
-        BKGDImage.isHidden = false
+        
         modButtonOutlet.isHidden = false
         divButtonOutlet.isHidden = false
         plusButtonOutlet.isHidden = false
@@ -132,46 +140,217 @@ class ViewController: UIViewController {
         clickHereForPartyMode.isHidden = true
         PartyModeButtonOutlet.isHidden = true
         ResultLabel.isHidden = true
+        partyModeLabel.isHidden = false
+        BKGDImage.isHidden = false
+        MultiplicationLabel.isHidden = true
+        XSignlabel.isHidden = true
+        ResultLabel.isHidden = true
+        
         
     }
     
+    
+    @IBAction func backButton(_ sender: Any) {
+        
+        BKGDImage.isHidden = true
+        divButtonOutlet.isHidden = true
+        modButtonOutlet.isHidden = true
+        plusButtonOutlet.isHidden = true
+        minButtonOutlet.isHidden = true
+        yoshiImage.isHidden = true
+        catBurritoImage.isHidden = true
+        lobsterDogImage.isHidden = true
+        partyModeLabel.isHidden = true
+        ResultLabel.isHidden = true
+        MultiplicationLabel.isHidden = false
+        clickHereForPartyMode.isHidden = false
+        PartyModeButtonOutlet.isHidden = false
+        
+        _ = textField1.text ?? "8"
+        
+        _ = textField2.text ?? "8"
+        
+    }
     
     
  
     
     
-    //MARK: Buttons
+
     
-   /* @IBAction func modButtonAction(_ sender: Any) {
+//MARK: Modulus
+    @IBAction func modButtonAction(_ sender: Any) {
+    
+        XSignlabel.isHidden = false
+        XSignlabel.text = "%"
+        
+        var strInput = textField1.text ?? "8"
+        
+        var strInput2 = textField2.text ?? "8"
+        
+        let numInput = Int(strInput) ?? 8
+        
+        let numInput2 = Int(strInput2) ?? 8
+        
+        var result = numInput % numInput2
+        
+        if result == 64 {
+            //shows yoshi
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = false
+        }
+        else if result%2 == 1 {
+            // shows cat burrito
+            catBurritoImage.isHidden = false
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = true
+        }
+        else {
+            // shows lobster
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = false
+            yoshiImage.isHidden = true
+            
+            ResultLabel.isHidden = true
+            //ResultLabel.text = "\(result)"
+        }
+    
     }
-    
+        
+   
+//MARK: Divide
     @IBAction func divButtonAction(_ sender: Any) {
+    
+        XSignlabel.isHidden = false
+        XSignlabel.text = "/"
+        
+        var strInput = textField1.text ?? "8"
+        
+        var strInput2 = textField2.text ?? "8"
+        
+        let numInput = Int(strInput) ?? 8
+        
+        let numInput2 = Int(strInput2) ?? 8
+        
+        var result = numInput / numInput2
+        
+        if result == 64 {
+            //shows yoshi
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = false
+        }
+        else if result%2 == 1 {
+            // shows cat burrito
+            catBurritoImage.isHidden = false
+            lobsterDogImage.isHidden = true
+            yoshiImage.isHidden = true
+        }
+        else {
+            // shows lobster
+            catBurritoImage.isHidden = true
+            lobsterDogImage.isHidden = false
+            yoshiImage.isHidden = true
+            
+            ResultLabel.isHidden = true
+            //ResultLabel.text = "\(result)"
+
+        }
     }
     
+
+//MARK: Addition
     @IBAction func plusButtonAction(_ sender: Any) {
+   
+        XSignlabel.isHidden = false
+        XSignlabel.text = "+"
+            
+            var strInput = textField1.text ?? "8"
+            
+            var strInput2 = textField2.text ?? "8"
+            
+            let numInput = Int(strInput) ?? 8
+            
+            let numInput2 = Int(strInput2) ?? 8
+            
+            var result = numInput + numInput2
+            
+            if result == 64 {
+                //shows yoshi
+                catBurritoImage.isHidden = true
+                lobsterDogImage.isHidden = true
+                yoshiImage.isHidden = false
+            }
+            else if result%2 == 1 {
+                // shows cat burrito
+                catBurritoImage.isHidden = false
+                lobsterDogImage.isHidden = true
+                yoshiImage.isHidden = true
+            }
+            else {
+                // shows lobster
+                catBurritoImage.isHidden = true
+                lobsterDogImage.isHidden = false
+                yoshiImage.isHidden = true
+                
+                ResultLabel.isHidden = true
+                //ResultLabel.text = "\(result)"
+        
+            }
+        
     }
     
-    @IBAction func minButtonAction(_ sender: Any) {
-    }
     
     
     
-    
-    
-    
-    
+    /*
     */
+//MARK: Subtraction
+    @IBAction func minButtonAction(_ sender: Any) {
+        
+        XSignlabel.isHidden = false
+        XSignlabel.text = "-"
+            
+            var strInput = textField1.text ?? "8"
+            
+            var strInput2 = textField2.text ?? "8"
+            
+            let numInput = Int(strInput) ?? 8
+            
+            let numInput2 = Int(strInput2) ?? 8
+            
+            var result = numInput - numInput2
+            
+            if result == 64 {
+                //shows yoshi
+                catBurritoImage.isHidden = true
+                lobsterDogImage.isHidden = true
+                yoshiImage.isHidden = false
+            }
+            else if result%2 == 1 {
+                // shows cat burrito
+                catBurritoImage.isHidden = false
+                lobsterDogImage.isHidden = true
+                yoshiImage.isHidden = true
+            }
+            else {
+                // shows lobster
+                catBurritoImage.isHidden = true
+                lobsterDogImage.isHidden = false
+                yoshiImage.isHidden = true
+                
+                ResultLabel.isHidden = true
+                //ResultLabel.text = "\(result)"
+            }
+        
+    }
     
     
     
     
     
-    
-    //MARK: If even
-    
-    //MARK: If odd
-    
-    //MARK: Party Mode: If party mode button clicked, multiply button hidden, self,view.backgroundColor = .//party mode color. [[alt mode have party background through ui image view sent backwards
+
 
 //MARK: REFERENCE SECTION FOR ALL CHANGEABLE VARIABLE FEATURES
 /* Here is the reference for text field text
